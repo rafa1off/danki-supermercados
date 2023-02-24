@@ -1,14 +1,18 @@
 var items = [];
 
-document.querySelector('input[type=submit')
-    .addEventListener('click', () => {
+document.querySelector('form')
+    .addEventListener('submit', (event) => {
+
+        event.preventDefault();
         var nomeProdutos = document.querySelector('input[name=nome-produto]').value;
         var precoProdutos = document.querySelector('input[name=valor-produto]').value;
 
         items.push({
-            nome: nomeProdutos.value,
-            valor: precoProdutos.value
+            nome: nomeProdutos,
+            valor: precoProdutos,
         });
+
+        document.querySelector('form').reset();
 
         /*
         <div class="lista-produtos-item">
@@ -31,9 +35,7 @@ document.querySelector('input[type=submit')
             </div>`
         });
         soma = soma.toFixed(2);
-        nomeProdutos.value = "";
-        precoProdutos.value = "";
-
+        
         let elementoSoma = document.querySelector('.soma-produtos h1');
         elementoSoma.innerHTML = `R$ ${soma}`;
         
