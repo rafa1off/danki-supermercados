@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2>App lista do supermercado</h2>
+        </header>
+        <main>
+            <form class="lista-cadastro">
+                <input type="text" placeholder="nome do produto" name="nome-produto">
+                <input type="number" placeholder="valor do produto" name="valor-produto" step="0.01">
+                <input type="submit" name="acao" value="Cadastrar">
+            </form>
+            <div class="lista-produtos"></div>
+            <div class="soma-produtos">
+                <h1>Total: R$ 0,00</h1>
+            </div>
+
+            <button name="limpar">Limpar</button>
+        </main>        
+    </body>
+</html>
